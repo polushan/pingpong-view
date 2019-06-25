@@ -1,0 +1,10 @@
+applications:
+- name: pingpong-view
+  buildpack: https://github.com/cloudfoundry/java-buildpack.git
+  random-route: true
+  instance: 1
+  path: target/pingpong-view-0.0.1-SNAPSHOT.jar
+  memory: 512m
+  env:
+    JAVA_OPTS: '-Xmx400M'
+    JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 11.+ }, memory_calculator: { stack_threads: 25 } }'

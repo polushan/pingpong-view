@@ -1,0 +1,22 @@
+eureka:
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: https://discovery-cheerful-fox.cfapps.io/eureka
+  instance:
+#    hostname: ${vcap.application.uris[0]}
+    nonSecurePortEnabled: false
+    securePortEnabled: true
+
+spring:
+  rabbitmq:
+    host: spider-01.rmq.cloudamqp.com
+    virtual-host: nhsbsmng
+    username: nhsbsmng
+    password: hJq4gSoszGqS1O1Vdl8ygtdNY5s6g8WF
+  cloud:
+    stream:
+      bindings:
+        input:
+          destination: ping-pong

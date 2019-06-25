@@ -1,0 +1,21 @@
+language: java
+jdk: openjdk11
+
+branches:
+  only:
+  - develop
+  - master
+
+before_install:
+- chmod +x mvnw
+
+deploy:
+  provider: cloudfoundry
+  username: polushan@yandex.ru
+  api: https://api.run.pivotal.io
+  organization: PingPong
+  space: development
+  manifest: manifest.yml
+  app_name: pingpong-view
+  on:
+    branch: master
