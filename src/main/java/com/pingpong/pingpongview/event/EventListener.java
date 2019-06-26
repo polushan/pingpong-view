@@ -23,7 +23,7 @@ public class EventListener {
 
     @StreamListener(target = Sink.INPUT)
     public void receiveOrder(PingPong pingPong) {
-        log.info("PingPong received: " + pingPong);
+        log.info("Event received: " + pingPong);
         repository.save(pingPong);
     }
 }
