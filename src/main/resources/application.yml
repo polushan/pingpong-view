@@ -20,3 +20,13 @@ spring:
       bindings:
         input:
           destination: ping-pong
+  jpa:
+    hibernate:
+      ddl-auto: none
+      dialect: mysql
+  datasource:
+    url: jdbc:mysql://us-cdbr-iron-east-02.cleardb.net/ad_e30a71cf6f98faa
+    driver-class-name: com.mysql.jdbc.Driver
+    username: b0ebc640488958
+    password: 7f038be0
+    max-active: 2
