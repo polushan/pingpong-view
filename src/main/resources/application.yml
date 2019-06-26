@@ -5,7 +5,7 @@ eureka:
     serviceUrl:
       defaultZone: https://discovery-cheerful-fox.cfapps.io/eureka
   instance:
-#    hostname: ${vcap.application.uris[0]}
+    hostname: ${vcap.application.uris[0]}
     nonSecurePortEnabled: false
     securePortEnabled: true
 
@@ -26,7 +26,7 @@ spring:
       dialect: mysql
   datasource:
     url: jdbc:mysql://us-cdbr-iron-east-02.cleardb.net/ad_e30a71cf6f98faa
-    driver-class-name: com.mysql.jdbc.Driver
+    driver-class-name: com.mysql.cj.jdbc.Driver
     username: b0ebc640488958
     password: 7f038be0
     max-active: 2
