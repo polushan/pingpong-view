@@ -1,3 +1,6 @@
 spring:
   application:
     name: pingpong-view
+  cloud:
+    config:
+      uri: https://config-service-patient-quoll.cfapps.io/
